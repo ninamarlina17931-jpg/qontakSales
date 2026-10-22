@@ -12,23 +12,37 @@ import SalesPage from "./pages/SalesPage";
 import PurchasesPage from "./pages/PurchasesPage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductionsPage from "./pages/ProductionsPage";
+import KategoriProdukPage from "./pages/KategoriProdukPage";
+
 import KasBankPage from "./pages/kasbankpage";
 import CreateBankAccountPage from "./pages/CreateBankAccountPage";
 import CreateTransferPage from "./pages/CreateTransferPage";
 import CreateReceiveMoneyPage from "./pages/CreateReceiveMoneyPage";
 import CreateSendMoneyPage from "./pages/CreateSendMoneyPage";
+
 import PenjualanPage from "./pages/PenjualanPage";
 import PembelianPage from "./pages/PembelianPage";
 import BiayaPage from "./pages/BiayaPage";
 import CreateBiayaPage from "./pages/CreateBiayaPage";
+
+import DaftarLainnya from "./pages/DaftarLainnya";
+import DaftarTransaksiPage from "./pages/DaftarTransaksiPage";
+import KategoriTagPage from "./pages/KategoriTagPage";
+import KategoriTagArchivedPage from "./pages/KategoriTagArchivedPage";
+import KategoriTagCustomDetailPage from "./pages/KategoriTagCustomDetailPage";
+import JadwalBerulangPage from "./pages/JadwalBerulangPage";
+import ClosingPeriodPage from "./pages/ClosingPeriodPage";
+
 import CreateSalesInvoicePage from "./pages/CreateSalesInvoicePage";
 import CreateSalesOrderPage from "./pages/CreateSalesOrderPage";
 import CreateSalesQuotePage from "./pages/CreateSalesQuotePage";
+
 import CreatePurchaseInvoicePage from "./pages/CreatePurchaseInvoicePage";
 import CreatePurchaseExchangePage from "./pages/CreatePurchaseExchangePage";
 import CreatePurchaseOrderPage from "./pages/CreatePurchaseOrderPage";
 import CreatePurchaseQuotePage from "./pages/CreatePurchaseQuotePage";
 import CreatePurchaseRequestPage from "./pages/CreatePurchaseRequestPage";
+
 import MainLayout from "./components/layout/MainLayout";
 import AuthGuard from "./components/layout/AuthGuard";
 
@@ -49,6 +63,7 @@ export default function App() {
 
           <Route path="/sales" element={<SalesPage />} />
           <Route path="/penjualan" element={<PenjualanPage />} />
+
           <Route
             path="/penjualan/invoice/create"
             element={<CreateSalesInvoicePage />}
@@ -64,6 +79,7 @@ export default function App() {
 
           <Route path="/purchases" element={<PurchasesPage />} />
           <Route path="/pembelian" element={<PembelianPage />} />
+
           <Route
             path="/pembelian/faktur/create"
             element={<CreatePurchaseInvoicePage />}
@@ -105,6 +121,35 @@ export default function App() {
 
           <Route path="/biaya" element={<BiayaPage />} />
           <Route path="/biaya/create" element={<CreateBiayaPage />} />
+
+          <Route path="/daftar-lainnya" element={<DaftarLainnya />} />
+          <Route path="/daftar-transaksi" element={<DaftarTransaksiPage />} />
+
+          <Route path="/kategori-tag" element={<KategoriTagPage />} />
+
+          <Route
+            path="/kategori-tag/custom/:categoryId"
+            element={<KategoriTagCustomDetailPage />}
+          />
+
+          <Route
+            path="/kategori-tag/archived"
+            element={<KategoriTagArchivedPage title="Arsip" />}
+          />
+
+          <Route
+            path="/kategori-tag/ungrouped"
+            element={
+              <KategoriTagArchivedPage
+                title="Belum di-assign"
+                showCreateButton
+              />
+            }
+          />
+
+          <Route path="/jadwal-berulang" element={<JadwalBerulangPage />} />
+
+          <Route path="/closing-period" element={<ClosingPeriodPage />} />
         </Route>
       </Route>
 

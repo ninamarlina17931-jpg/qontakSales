@@ -173,42 +173,6 @@ export default function PenjualanPage() {
                 Buat penjualan baru
                 <CaretDown size={14} />
               </button>
-
-              {createOpen && (
-                <div className="absolute right-0 z-30 mt-1 w-56 rounded-md border border-slate-200 bg-white py-1 shadow-lg">
-                  <button
-                    type="button"
-                    onClick={() => goToCreatePage("invoice")}
-                    className="w-full px-4 py-2.5 text-left text-[12px] text-slate-700 hover:bg-slate-50"
-                  >
-                    Buat penagihan
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => setCreateOpen(false)}
-                    className="w-full px-4 py-2.5 text-left text-[12px] text-slate-700 hover:bg-slate-50"
-                  >
-                    Buat pengiriman
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => goToCreatePage("order")}
-                    className="w-full px-4 py-2.5 text-left text-[12px] text-slate-700 hover:bg-slate-50"
-                  >
-                    Buat pesanan
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => goToCreatePage("quote")}
-                    className="w-full px-4 py-2.5 text-left text-[12px] text-slate-700 hover:bg-slate-50"
-                  >
-                    Buat penawaran
-                  </button>
-                </div>
-              )}
             </div>
           </div>
         </div>
